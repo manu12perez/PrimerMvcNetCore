@@ -9,6 +9,7 @@ namespace PrimerMvcNetCore.Controllers
         {
             return View();
         }
+        //mensaje de prueba
 
         //VAMOS A RECIBIR DOS PARAMETROS
         public IActionResult VistaControllerGet
