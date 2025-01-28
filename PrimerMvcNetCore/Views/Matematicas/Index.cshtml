@@ -1,0 +1,22 @@
+﻿<h1>Menú matemáticas Controller</h1>
+<ul>
+    <li>
+        @Html.ActionLink("Sumar 5 + 6", "SumarNumerosGet"
+                 , "Matematicas",
+                 new { numero1 = 5, numero2 = 6 })
+    </li>
+    
+    <li>
+        <a asp-controller="Matematicas"
+           asp-action="SumarNumerosPost">
+            Sumar Números Post
+        </a>
+    </li>
+
+    <li>
+        <a asp-controller="Matematicas"
+           asp-action="ConjeturaCollatz">
+            Conjetura de Collatz
+        </a>
+    </li>
+</ul>
