@@ -1,0 +1,30 @@
+﻿@model List<FilaTablaMultiplicar>
+<h1 style="color:blue">Tabla de Multiplicar Model</h1>
+
+<form method="post">
+    <label>Ingrese un número:</label>
+	<input type="text" name="numero" class="form-control" />
+    <button class="btn btn-success">
+		Calcular
+	</button>
+</form>
+
+@if (Model != null)
+{
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Operación</th>
+				<th>Resultado</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (FilaTablaMultiplicar fila in Model){
+				<tr>
+					<td>@fila.Operacion</td>
+					<td>@fila.Resultado</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}

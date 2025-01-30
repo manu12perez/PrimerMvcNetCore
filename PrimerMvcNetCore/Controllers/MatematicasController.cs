@@ -10,6 +10,43 @@ namespace PrimerMvcNetCore.Controllers
             return View();
         }
 
+        public IActionResult TablaMultiplicar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult TablaMultiplicar(int numero)
+        {
+            List<int> tabla = new List<int>();
+
+            for (int i = 1; i <= 10; i++)
+            {
+                tabla.Add(numero * i);
+            }
+
+            return View(tabla);
+        }
+
+        public IActionResult TablaMultiplicarModel()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult TablaMultiplicarModel(int numero)
+        {
+            List<FilaTablaMultiplicar> filas = new List<FilaTablaMultiplicar>();
+            for(int i = 1; i <= 10; i++)
+            {
+                FilaTablaMultiplicar fila = new FilaTablaMultiplicar();
+                fila.Operacion = numero + " * " + i;
+                fila.Resultado = numero * i;
+                filas.Add(fila);
+            }
+            return View(filas);
+        }
+
         public IActionResult ConjeturaCollatz()
         {
             return View();
